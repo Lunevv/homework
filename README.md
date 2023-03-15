@@ -19,12 +19,12 @@ sudo apt-get install python3
 This script is very easy to use, and all you need to do is just copy the code, specify the desired locations in:
 
 ```
->>> weather_location = ["Лондон", "svo", "Череповец"]
+weather_location = ["Лондон", "svo", "Череповец"]
 ```
 
 Then run the script in the console:
 
 ```
-python3 weather.py
+python3 get_weather.py
 ```
 
