@@ -1,19 +1,16 @@
 import requests
 
 weather_location = ["Лондон", "svo", "Череповец"]
+url_weather = "https://wttr.in/{}"
+paylad = {"nTqM": "", "lang": "ru"}
 
-url = "https://wttr.in/{}?nTqM&lang=ru"
-url1 = url.format(weather_location[0])
-url2 = url.format(weather_location[1])
-url3 = url.format(weather_location[2])
+def get_weather():
 
-response1 = requests.get(url1)
-response2 = requests.get(url2)
-response3 = requests.get(url3)
-response1.raise_for_status()
-response2.raise_for_status()
-response3.raise_for_status()
+    for location in weather_location:
+        url = url_weather.format(location)
+        response = requests.get(url, params=paylad)
+        response.raise_for_status()
+        print(response.text)
 
-print(response1.text)
-print(response2.text)
-print(response3.text)
+if __name__ == '__main__':
+    get_weather()
