@@ -8,23 +8,21 @@ Run the script and it will display the weather
 
 ### Python compatibility
 
-Python3 must be installed
+Python3 should already be installed. Use pip (or pip3, if there is a conflict with Python2) to install dependencies:
 
 ```
 sudo apt-get install python3
+pip install -r requirements.txt
 ```
 
 ### Usage
 
-This script is very easy to use, and all you need to do is just copy the code, specify the desired locations in:
-
-```
-weather_location = ["Лондон", "svo", "Череповец"]
-```
-
-Then run the script in the console:
+This script is very easy to use, and all you need to do is just run the script in the console:
 
 ```
 python3 get_weather.py
 ```
 
+### Project Goals
+
+This code was written for educational purposes as part of an online course for web developers at dvmn.org.
